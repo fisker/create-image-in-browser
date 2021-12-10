@@ -1,0 +1,79 @@
+{
+  "name": "create-image-in-browser",
+  "version": "0.0.0",
+  "description": "Create image with the `<canvas>` element",
+  "homepage": "https://github.com/fisker/create-image-in-browser#readme",
+  "bugs": {
+    "url": "https://github.com/fisker/create-image-in-browser/issues"
+  },
+  "repository": "fisker/create-image-in-browser",
+  "funding": "https://github.com/fisker/create-image-in-browser?sponsor=1",
+  "license": "MIT",
+  "author": {
+    "name": "fisker Cheung",
+    "email": "lionkay@gmail.com",
+    "url": "https://www.fiskercheung.com/"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "exports": "./index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "build": "run-p build:*",
+    "build:js": "echo Nothing to build",
+    "clean": "run-p clean:*",
+    "clean:dist": "del-cli dist",
+    "dist": "run-p dist:*",
+    "dist:npm": "np --yolo --no-yarn",
+    "format": "run-p format:*",
+    "format:eslint": "yarn lint:eslint --fix",
+    "format:markdown": "yarn lint:markdown --fix",
+    "format:package-json": "sort-package-json \"package.json\" \"packages/*/package.json\"",
+    "format:prettier": "yarn lint:prettier --write",
+    "lint": "run-p lint:*",
+    "lint:eslint": "eslint \"**/*.{js,mjs,cjs,vue}\"",
+    "lint:markdown": "markdownlint \"**/*.md\" --ignore \"**/node_modules/**\"",
+    "lint:package-json": "yarn run format:package-json --check",
+    "lint:prettier": "prettier \"**/*.{css,html,js,cjs,mjs,json,less,md,scss,ts,vue,yaml,yml}\" --check",
+    "test": "ava",
+    "test-coverage": "c8 ava",
+    "release": "run-s clean build format test dist",
+    "prepare": "husky install"
+  },
+  "ava": {
+    "verbose": true
+  },
+  "c8": {
+    "reporter": [
+      "lcov",
+      "text"
+    ]
+  },
+  "dependencies": {
+    "evaluate-in-browser": "0.0.1",
+    "launch-puppeteer": "0.0.1"
+  },
+  "devDependencies": {
+    "@fisker/eslint-config": "10.0.3",
+    "@fisker/eslint-config-ava": "2.0.4",
+    "@fisker/husky-config": "4.1.1",
+    "@fisker/lint-staged-config": "3.1.4",
+    "@fisker/prettier-config": "5.0.3",
+    "ava": "3.15.0",
+    "c8": "7.10.0",
+    "del-cli": "4.0.1",
+    "eslint": "8.4.1",
+    "husky": "7.0.4",
+    "lint-staged": "12.1.2",
+    "markdownlint-cli": "0.30.0",
+    "npm-run-all": "4.1.5",
+    "prettier": "2.5.1",
+    "sort-package-json": "1.53.1"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
