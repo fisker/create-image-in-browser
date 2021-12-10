@@ -1,6 +1,6 @@
 {
   "name": "create-image-in-browser",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Create image with the `<canvas>` element",
   "homepage": "https://github.com/fisker/create-image-in-browser#readme",
   "bugs": {
