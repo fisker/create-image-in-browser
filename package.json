@@ -52,8 +52,7 @@
     ]
   },
   "dependencies": {
-    "evaluate-in-browser": "0.0.1",
-    "launch-puppeteer": "0.0.1"
+    "evaluate-in-browser": "0.0.1"
   },
   "devDependencies": {
     "@fisker/eslint-config": "10.0.3",
