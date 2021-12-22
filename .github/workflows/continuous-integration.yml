@@ -20,10 +20,9 @@ jobs:
         node_version:
           - "16"
           - "14"
-          - "12"
         # exclude:
         #   - os: "macos-latest"
-        #     node_version: "12"
+        #     node_version: "14"
 
     name: Node.js ${{ matrix.node_version }} on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
