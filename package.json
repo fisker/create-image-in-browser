@@ -43,6 +43,7 @@
     "prepare": "husky install"
   },
   "ava": {
+    "timeout" "1m",
     "verbose": true
   },
   "c8": {
