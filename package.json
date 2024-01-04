@@ -62,7 +62,7 @@
     "@fisker/lint-staged-config": "3.3.1",
     "@fisker/prettier-config": "5.1.1",
     "ava": "6.0.1",
-    "c8": "8.0.1",
+    "c8": "9.0.0",
     "del-cli": "5.1.0",
     "eslint": "8.56.0",
     "husky": "8.0.3",
