@@ -56,7 +56,7 @@
     "evaluate-in-browser": "0.0.2"
   },
   "devDependencies": {
-    "@fisker/eslint-config": "13.1.1",
+    "@fisker/eslint-config": "13.1.3",
     "@fisker/eslint-config-ava": "3.0.0",
     "@fisker/husky-config": "4.1.3",
     "@fisker/lint-staged-config": "3.3.2",
